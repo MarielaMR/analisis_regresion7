@@ -1,0 +1,64 @@
+#1)crear una matriz con la funcion dim() de 5 columnas y 4 renglones,
+##esta matriz esta basada en un vector que contiene estos datos 11:30
+##el nombre de los renglones es el siguiente (toluca, pachuca, gdl, mty))
+##el nombre de las columnas es (escuela1, escuela2, escuela3, escuela4, escuela5)
+##incorporare el nombre a los renglones y columnas de la matriz
+##identificar el dato de la escuela3 de toluca, de la escuela5 de gdl y 
+##la escuela1 de pachuca
+
+m <- matrix(sample(11:30, 20, replace = T),nrow = 4, ncol = 5)
+m
+colnames(m) <- c("escuela1", "escuela2", "escuela3", "escuela4", "escuela5")
+m
+rownames(m) <- c("toluca", "pachuca", "gdl", "mty")
+m
+m[1,3]
+m[3,5]
+m[2,1]
+
+##2)crear con la funcion matrix una matiz de 5 renglones
+##y 3 columnas...y preguntar por el dato de la matriz en el 
+##renglon 3 y columna 3
+a <- matrix(sample(0:50, 15 , replace = T),nrow = 5, ncol = 3)
+a
+a[3,3]
+
+##3)completar el codigo
+s <-matrix(1:9,nrow = 3)
+s[ ,2]*s[ ,1]
+
+##4)completa el codigo
+a<- c("pequeño", "largo", "enorme")
+b <- a!="largo"
+b
+a[a=!!b]
+
+##5)crear 3 variables de 4 entradas, las variables de nombre: facultad,
+##licenciatura.
+##calificacion alumnos
+####verificar con r que tipos de variables son (numerico y caracter)
+##borrar las variables facultad y calificacion alumno3
+##graficar con pie la variable calificacion incorporar los diversos argumentos
+
+f <- c("economia","ingenieria","administracion", "geografia")
+c <- c("actuaria","informatica","contaduria","geografia")
+k <- c("9.0","8.0","9.5","8.5")
+class(f)
+class(c)
+class(k)
+##6)generar esta informacion se tiene 4 personas de 32, 35, 43 y 25 años
+##de nombres carlos, juan, raquel y paty, su situcion conyugal
+##es la sig. casado, soltero, soltero, union libre,
+##la seguridad social: IMSS, IMSS, ISSSTE, PRIVADO
+##contador, carpintero, profesora, diseñador
+##generar los vectores de nombres, años, seguridad social, situacion conyugal y ocupacion
+##hacer un data frame de estos vectores
+
+nombre <-c("carlos", "juan", "raquel", "paty")
+edad <-c("32","35","43","25")
+ssocial<-c("IMSS","IMSS","ISSSTE","PRIVADO")
+sconyugal<-c("casado","soltero","soltero","union libre")
+ocupacion <-c("contador","carpintero","profesora","diseñador")
+
+n <-data.frame(nombre,edad,ssocial,sconyugal,ocupacion)
+n
