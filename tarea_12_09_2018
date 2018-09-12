@@ -1,0 +1,18 @@
+#######Tarea: Ejercicio 2##########
+x2<-c(5,12,14,17,23,30,40,47,55,67,72,81,96,112,127)#volumen precipitación
+y2<-c(4,10,13,15,15,25,27,46,38,46,53,70,82,99,100)#volumen escurrimiento
+mod2<-lm(y2~x2)
+summary(mod2)
+##Estadistico t
+qt(.025,13)
+##Intervalos de confianza
+0.82697 +(-2.160369* 0.03652)
+0.82697 -(-2.160369* 0.03652)
+
+## 1.Existe una relacion util entre la precipitación y el escurriemiento
+#Dado que el valor de estadistico es menor a .05, se rechaza la H0 y se acepta la Ha
+#por lo tanto tenemos una relacion util en el modelo.
+## 2.Calcule I.C. con 95% e interpreta
+#Para el intervalo de confianza se puede mencionar que un aumento en el volumen de escurri-
+#miento de entre 0.7480 y 0.9058 se asocia con un aumento en una unidad en el volumen de 
+#precipitacion.
