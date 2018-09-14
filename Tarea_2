@@ -1,0 +1,35 @@
+############ MARIELA MORENO ROJAS
+
+
+x <- c( .40,.42,.48,.51,.57,.60,.70,.75,.75,.78,.84,.95,.99,1.03,1.12,1.15,1.20,1.25,1.25,1.28,1.30,1.34,1.37,1.40,1.43,1.46,1.49,1.55,1.58,1.60)
+y <- c( 1.02,1.21,.88,.98,1.52,1.83,1.50,1.80,1.74,1.63,2.00,2.80,2.48,2.47,3.05,3.18,3.76,3.68,3.82,3.21,4.27,3.12,3.99,3.75,4.10,4.18,3.77,4.34,4.21,4.92)
+
+datos <- data.frame(x,y)
+datos
+#### 1)Gráfica de dispersión ####
+install.packages("ggplot2")
+library(ggplot2)
+### 1.2)Identificar "outliers" ###
+install.packages("outliers")
+library(outliers)
+x11()
+plot(x,y)
+outlier(datos, opposite=FALSE, logical=FALSE)
+datos[1,1]=NA
+datos[30,2]=NA
+x11()
+plot(datos, main="Sin outliers")
+
+### 1.1)Tipo de relación ###
+# Regresión lineal 
+
+### 1.3)Fuerza de la relacion (alta, baja, media) ###
+# Alta
+attach(valo)
+cor(x,y)
+##### Tenemos una relacion de .96 y podemos decir que la relacion es alta positiva.
+### Si identifican outliers dibujarlo de otro color la grafica ###
+# Como podemos observar la correlacion nos da un valor cercano al 1 por lo tanto las variables estan altamente relacionadas
+# excluyendo a los outliers.
+### Si hay outliers eliminarlo y graficar nuevamente ###
+# No se identificaron outliers
